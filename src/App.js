@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import About from './components/About';
+import HomeHome from './components/Dashboard/HomeHome';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+   return(
+     <React.Fragment>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about-us" component={About} />
+            <Route path='/register' component={Register} />
+            <Route path="/login" component={Login} />
+            <Route path="/dashboard/HomeHome" component={HomeHome} />
+          </Switch>
+        </Router>
+     </React.Fragment>
+   )
+  }
 }
 
 export default App;

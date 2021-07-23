@@ -1,0 +1,8 @@
+.attForm{
+    width: 500px;
+    background-color: bisque;
+    /*overflow: auto;*/
+    padding: 30px;
+    margin-top: 120px;
+    border-radius: 5px;
+}
